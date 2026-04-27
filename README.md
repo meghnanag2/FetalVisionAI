@@ -176,9 +176,7 @@ E -->|No| G[Continue Routine Monitoring]
 
 ## Disclaimer
 
-This repository represents a graduate academic research project.
-
-It is **not** an FDA-approved medical device and should not be used for diagnosis or treatment without regulatory review, external validation, and clinician oversight.
+It is **not** yet an FDA-approved medical device and should not be used for diagnosis or treatment without regulatory review, external validation, and clinician oversight.
 
 ## Authors
 
