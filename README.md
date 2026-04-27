@@ -1,6 +1,9 @@
-# FetalVisionAI: Multimodal Deep Learning for Prenatal CHD Screening
 
-FetalVisionAI is a multimodal deep learning system designed to estimate **patient-level congenital heart disease (CHD) risk** by combining prenatal ultrasound imaging with maternal clinical data.
+<p align="center">
+  <img src="images/banner.svg" alt="FetalVisionAI Banner" width="100%"/>
+</p>
+
+**FetalVisionAI** is a multimodal deep learning system designed to estimate **patient-level congenital heart disease (CHD) risk** by combining prenatal ultrasound imaging with maternal clinical data.
 
 Rather than relying on imaging alone, this project integrates two complementary sources of information:
 
