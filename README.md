@@ -1,6 +1,5 @@
-
 <p align="center">
-  <img src="images/banner.svg" alt="FetalVisionAI Banner" width="100%"/>
+  <img src="images/banner.svg" alt="FetalVisionAI Banner" width="100%" height="200"/>
 </p>
 
 **FetalVisionAI** is a multimodal deep learning system designed to estimate **patient-level congenital heart disease (CHD) risk** by combining prenatal ultrasound imaging with maternal clinical data.
