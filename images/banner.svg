@@ -3,69 +3,71 @@
   <desc>Banner for FetalVisionAI — Multimodal Deep Learning for Prenatal CHD Screening</desc>
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#010c18"/>
-      <stop offset="100%" stop-color="#020f22"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2a42"/>
+      <stop offset="100%" stop-color="#1a3a58"/>
     </linearGradient>
     <linearGradient id="lineFade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#1b5c92" stop-opacity="0"/>
-      <stop offset="18%"  stop-color="#2e8fd4"/>
-      <stop offset="82%"  stop-color="#2e8fd4"/>
-      <stop offset="100%" stop-color="#1b5c92" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#3a7aaa" stop-opacity="0"/>
+      <stop offset="15%"  stop-color="#5a9fc8"/>
+      <stop offset="85%"  stop-color="#5a9fc8"/>
+      <stop offset="100%" stop-color="#3a7aaa" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="spikeFade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#50c8ff" stop-opacity="0"/>
-      <stop offset="30%"  stop-color="#82daff"/>
-      <stop offset="50%"  stop-color="#b8edff"/>
-      <stop offset="70%"  stop-color="#82daff"/>
-      <stop offset="100%" stop-color="#50c8ff" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#5aaad4" stop-opacity="0"/>
+      <stop offset="35%"  stop-color="#88c8e8"/>
+      <stop offset="50%"  stop-color="#d0eef8"/>
+      <stop offset="65%"  stop-color="#88c8e8"/>
+      <stop offset="100%" stop-color="#5aaad4" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
   <rect width="900" height="200" fill="url(#bg)"/>
 
+  <line x1="0" y1="0" x2="900" y2="0" stroke="#3a6a90" stroke-width="2"/>
+
   <text
-    x="450" y="52"
+    x="450" y="56"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="46"
     font-weight="700"
-    fill="#d4eeff"
+    fill="#e8f4ff"
     text-anchor="middle"
     letter-spacing="2"
   >FetalVisionAI</text>
 
   <text
-    x="450" y="74"
+    x="450" y="78"
     font-family="'Segoe UI', Arial, sans-serif"
-    font-size="11"
-    font-weight="400"
-    fill="#2e6e9e"
+    font-size="11.5"
+    fill="#8ab8d4"
     text-anchor="middle"
     letter-spacing="4"
   >MULTIMODAL DEEP LEARNING  ·  PRENATAL CHD SCREENING</text>
 
-  <line x1="80" y1="88" x2="820" y2="88" stroke="#0d2b42" stroke-width="0.7"/>
+  <line x1="120" y1="92" x2="780" y2="92" stroke="#2a5a7a" stroke-width="0.6"/>
 
-  <line x1="80" y1="115"  x2="900" y2="115"
-        stroke="url(#lineFade)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="80" y1="118" x2="820" y2="118" stroke="url(#lineFade)" stroke-width="1.4"/>
 
   <polyline
-    points="80,115  380,115  392,115  400,109  407,120  413,92  419,138  424,115  432,115  439,109  444,115  520,115  540,115  900,115"
+    points="80,118  370,118  382,118  390,110  397,124  404,90  411,145  417,118  427,118  435,110  441,118  530,118  820,118"
     fill="none"
     stroke="url(#spikeFade)"
-    stroke-width="2.2"
+    stroke-width="2.4"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
 
-  <rect x="267" y="150" width="112" height="24" rx="12" fill="#030f1e" stroke="#164e7a" stroke-width="0.8"/>
-  <text x="323" y="166" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#4aaae0" text-anchor="middle">Multimodal AI</text>
+  <rect x="258" y="153" width="118" height="26" rx="13" fill="#0d2438" stroke="#3a6e94" stroke-width="0.9"/>
+  <text x="317" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="11.5" fill="#90c8e4" text-anchor="middle" font-weight="500">Multimodal AI</text>
 
-  <rect x="394" y="150" width="112" height="24" rx="12" fill="#030f1e" stroke="#164e7a" stroke-width="0.8"/>
-  <text x="450" y="166" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#4aaae0" text-anchor="middle">CHD Detection</text>
+  <rect x="391" y="153" width="118" height="26" rx="13" fill="#0d2438" stroke="#3a6e94" stroke-width="0.9"/>
+  <text x="450" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="11.5" fill="#90c8e4" text-anchor="middle" font-weight="500">CHD Detection</text>
 
-  <rect x="521" y="150" width="112" height="24" rx="12" fill="#030f1e" stroke="#164e7a" stroke-width="0.8"/>
-  <text x="577" y="166" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#4aaae0" text-anchor="middle">Health Equity</text>
+  <rect x="524" y="153" width="118" height="26" rx="13" fill="#0d2438" stroke="#3a6e94" stroke-width="0.9"/>
+  <text x="583" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="11.5" fill="#90c8e4" text-anchor="middle" font-weight="500">Health Equity</text>
 
-  <text x="450" y="194" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#122d46" text-anchor="middle">© 2025 Vanessa Thorsten &amp; Meghna Nag · University of Colorado Boulder</text>
+  <text x="450" y="194" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" fill="#4a7a9a" text-anchor="middle">© 2025 Vanessa Thorsten &amp; Meghna Nag · University of Colorado Boulder</text>
+
+  <line x1="0" y1="199" x2="900" y2="199" stroke="#3a6a90" stroke-width="1.5"/>
 </svg>
