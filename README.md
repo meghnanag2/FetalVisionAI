@@ -1,18 +1,27 @@
-# SafeFetalVision
+# FetalVisionAI
 
-AI-assisted prenatal congenital heart disease (CHD) screening using multimodal ultrasound and clinical data.
+AI-assisted prenatal congenital heart disease screening using multimodal ultrasound imaging and clinical data.
 
-Building safer fetal screening workflows for earlier CHD detection in underserved and rural maternal care settings.
+Helping clinicians identify fetal heart risk earlier through scalable screening workflows designed for specialist-limited and underserved care settings.
 
----
+FetalVisionAI combines medical imaging intelligence with structured clinical context to estimate congenital heart disease (CHD) risk before birth.
+
+Like traditional screening, but smarter. Traditional workflows rely heavily on image quality, specialist availability, and manual review. FetalVisionAI adds multimodal AI support through image embeddings, clinical fusion, calibrated risk scoring, and referral-aware thresholding.
 
 ## TL;DR
 
-SafeFetalVision is a multimodal deep learning project that combines fetal ultrasound image embeddings from **FetalCLIP** with patient-level clinical/tabular embeddings from the **CARDIUM** dataset to estimate congenital heart disease risk.
+FetalVisionAI is a research-driven multimodal deep learning system built using the CARDIUM dataset.
 
-The system compares **Binary Cross Entropy**, **Weighted BCE**, and **Focal Loss** under the same architecture, followed by **Platt scaling** and threshold tuning for high-sensitivity screening.
+It combines:
 
-**Best model: Focal Loss**
+- **FetalCLIP** ultrasound image embeddings  
+- maternal and patient clinical features  
+- cross-attention fusion modeling  
+- focal loss for rare disease detection  
+- calibrated probability outputs  
+- threshold tuning for screening workflows
+
+Best performing model:
 
 | Metric | Score |
 |---|---:|
@@ -21,48 +30,94 @@ The system compares **Binary Cross Entropy**, **Weighted BCE**, and **Focal Loss
 | AUROC | 0.814 |
 | AUPRC | 0.522 |
 
----
+This balance is important because healthcare screening systems must detect positive cases while minimizing unnecessary referrals.
 
-## The Problem
+## Why This Project Matters
 
-Congenital heart disease is one of the most common birth defects. Early prenatal detection improves referral planning, delivery preparation, neonatal intervention, and postnatal outcomes.
+Congenital heart disease is one of the most common birth defects. Earlier prenatal detection can improve:
 
-However, access to fetal cardiology specialists can be limited in rural and underserved regions.
+- delivery planning  
+- neonatal specialist readiness  
+- postnatal treatment timing  
+- patient monitoring during pregnancy  
+- family preparedness
 
-SafeFetalVision explores how AI-assisted screening can support clinicians by identifying pregnancies that may benefit from specialist follow-up.
+However, expert fetal cardiology access may be limited in:
 
----
+- rural hospitals  
+- smaller clinics  
+- underserved maternal care regions  
+- traveling sonographer workflows
 
-## Dataset
+FetalVisionAI explores how AI-assisted triage can help bridge that gap.
 
-This project uses the **CARDIUM** fetal imaging dataset.
+## What FetalVisionAI Does
 
-- 6,558 fetal cardiac ultrasound images
-- 1,103 patients
-- Patient-linked clinical variables
-- Oversampled CHD prevalence of 7.19%
+FetalVisionAI receives two sources of information:
 
----
+### Ultrasound Understanding
 
-## System Architecture
+Fetal ultrasound images are encoded using a pretrained medical vision model (**FetalCLIP**) that captures anatomical patterns from imaging data.
+
+### Clinical Understanding
+
+Structured maternal and patient variables are encoded into clinical embeddings representing non-image risk signals.
+
+### Multimodal Fusion
+
+Both streams are combined through a neural network fusion layer that learns how imaging findings and clinical context interact.
+
+### Risk Prediction
+
+The final system outputs a calibrated CHD risk probability that can support referral decisions.
+
+## How It Works
 
 ```mermaid
 flowchart TD
 A[Ultrasound Images] --> B[FetalCLIP Encoder]
 B --> C[Image Embeddings]
-D[Clinical Features] --> E[Tabular Encoder]
+
+D[Clinical Features] --> E[Clinical Encoder]
 E --> F[Clinical Embeddings]
-C --> G[Cross-Attention Fusion]
+
+C --> G[Cross Attention Fusion]
 F --> G
+
 G --> H[Prediction Head]
-H --> I[CHD Risk Score]
+H --> I[Raw CHD Risk Score]
 I --> J[Platt Scaling]
 J --> K[Calibrated Probability]
 ```
 
----
+## Dataset
 
-## Results
+This project uses the CARDIUM fetal imaging dataset.
+
+| Attribute | Value |
+|---|---|
+| Images | 6,558 fetal cardiac ultrasound images |
+| Patients | 1,103 |
+| Data Type | Imaging + Clinical |
+| CHD Prevalence | 7.19% |
+
+The dataset supports patient-level multimodal learning across both imaging and tabular inputs.
+
+## Training Strategy
+
+Three loss functions were tested under the same architecture:
+
+| Method | Purpose |
+|---|---|
+| BCE | Standard binary classification baseline |
+| Weighted BCE | Increased emphasis on minority positive class |
+| Focal Loss | Better handling of hard rare positive examples |
+
+Why this matters:
+
+Rare disease prediction is highly imbalanced. A model may appear accurate while still missing important positive cases.
+
+## Final Results
 
 | Model | Sensitivity | Specificity | AUROC | AUPRC |
 |---|---:|---:|---:|---:|
@@ -70,22 +125,89 @@ J --> K[Calibrated Probability]
 | Weighted BCE | 0.757 | 0.737 | 0.799 | 0.327 |
 | Focal Loss | 0.770 | 0.688 | 0.814 | 0.522 |
 
----
+## Why Focal Loss Won
 
-## Future Vision
+Focal loss delivered the strongest practical screening tradeoff:
+
+- strong CHD detection performance
+- reduced false positive burden
+- best ranking performance
+- better rare class learning behavior
+
+This makes it the most deployment-relevant model among tested approaches.
+
+## Why This Can Be Better Than Many Existing Approaches
+
+Many traditional pipelines depend on:
+
+- image-only review
+- manual interpretation bottlenecks
+- specialist scarcity
+- uncalibrated predictions
+- one-size-fits-all thresholds
+
+FetalVisionAI introduces:
+
+| Capability | Benefit |
+|---|---|
+| Multimodal Inputs | Uses image + clinical context |
+| Calibration | More reliable probabilities |
+| Threshold Tuning | Adaptable referral strategy |
+| Rare Disease Optimization | Better positive detection |
+| Scalable Workflow | Supports lower-resource settings |
+
+## Deployment Vision
 
 ```mermaid
 flowchart TD
-A[Clinic Upload] --> B[Run Model]
-B --> C[Risk Score]
-C --> D{High Risk?}
-D -->|Yes| E[Refer Specialist]
-D -->|No| F[Routine Monitoring]
+A[Clinic Upload] --> B[Run FetalVisionAI]
+B --> C[Generate CHD Risk Score]
+C --> D{Above Referral Threshold?}
+
+D -->|Yes| E[Refer to Specialist]
+D -->|No| F[Continue Standard Monitoring]
 ```
 
----
+## Potential Real World Impact
+
+If externally validated, systems like this could help:
+
+- reduce missed CHD cases
+- prioritize specialist resources
+- improve prenatal access equity
+- support sonographers in remote settings
+- improve earlier referral pathways
+
+## Repository Structure
+
+```text
+FetalVisionAI/
+├── notebooks/
+├── src/
+├── results/
+├── reports/
+├── presentation/
+└── data/
+```
+
+## Tech Stack
+
+- Python
+- PyTorch
+- Scikit-learn
+- Pandas / NumPy
+- Jupyter Notebooks
+- Medical Vision Embeddings
+- Multimodal Deep Learning
+
+## Important Note
+
+This repository is for research and educational purposes only.
+
+It is not a medical device and should not be used for diagnosis or treatment without external validation, regulatory review, and clinician oversight.
 
 ## Authors
-Vanessa Thorsten
+
+Vanessa Thorsten  
 Meghna Nag  
 University of Colorado Boulder
