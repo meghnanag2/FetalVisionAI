@@ -19,7 +19,7 @@ Because CHD is a relatively rare condition, many traditional models can achieve 
 ## Why This Project Matters
 
 <p align="center">
-  <img src="images/motivaiton_image.png" alt="SafeFetalVision Banner" width="100%">
+  <img src="images/motivaiton_image.png" alt="SafeFetalVision Banner" width="50%">
 </p>
 
 
