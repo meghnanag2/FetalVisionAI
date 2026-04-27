@@ -1,0 +1,71 @@
+<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>FetalVisionAI</title>
+  <desc>Banner for FetalVisionAI — Multimodal Deep Learning for Prenatal CHD Screening</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#010c18"/>
+      <stop offset="100%" stop-color="#020f22"/>
+    </linearGradient>
+    <linearGradient id="lineFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1b5c92" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#2e8fd4"/>
+      <stop offset="82%"  stop-color="#2e8fd4"/>
+      <stop offset="100%" stop-color="#1b5c92" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="spikeFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#50c8ff" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#82daff"/>
+      <stop offset="50%"  stop-color="#b8edff"/>
+      <stop offset="70%"  stop-color="#82daff"/>
+      <stop offset="100%" stop-color="#50c8ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="200" fill="url(#bg)"/>
+
+  <text
+    x="450" y="52"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="46"
+    font-weight="700"
+    fill="#d4eeff"
+    text-anchor="middle"
+    letter-spacing="2"
+  >FetalVisionAI</text>
+
+  <text
+    x="450" y="74"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="11"
+    font-weight="400"
+    fill="#2e6e9e"
+    text-anchor="middle"
+    letter-spacing="4"
+  >MULTIMODAL DEEP LEARNING  ·  PRENATAL CHD SCREENING</text>
+
+  <line x1="80" y1="88" x2="820" y2="88" stroke="#0d2b42" stroke-width="0.7"/>
+
+  <line x1="80" y1="115"  x2="900" y2="115"
+        stroke="url(#lineFade)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <polyline
+    points="80,115  380,115  392,115  400,109  407,120  413,92  419,138  424,115  432,115  439,109  444,115  520,115  540,115  900,115"
+    fill="none"
+    stroke="url(#spikeFade)"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <rect x="267" y="150" width="112" height="24" rx="12" fill="#030f1e" stroke="#164e7a" stroke-width="0.8"/>
+  <text x="323" y="166" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#4aaae0" text-anchor="middle">Multimodal AI</text>
+
+  <rect x="394" y="150" width="112" height="24" rx="12" fill="#030f1e" stroke="#164e7a" stroke-width="0.8"/>
+  <text x="450" y="166" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#4aaae0" text-anchor="middle">CHD Detection</text>
+
+  <rect x="521" y="150" width="112" height="24" rx="12" fill="#030f1e" stroke="#164e7a" stroke-width="0.8"/>
+  <text x="577" y="166" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#4aaae0" text-anchor="middle">Health Equity</text>
+
+  <text x="450" y="194" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#122d46" text-anchor="middle">© 2025 Vanessa Thorsten &amp; Meghna Nag · University of Colorado Boulder</text>
+</svg>
