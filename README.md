@@ -18,6 +18,11 @@ Because CHD is a relatively rare condition, many traditional models can achieve 
 
 ## Why This Project Matters
 
+<p align="center">
+  <img src="images/motivaiton_image.png" alt="SafeFetalVision Banner" width="100%">
+</p>
+
+
 Approximately **40% of counties in Colorado** lack prenatal or delivery services, creating maternity care deserts where patients may need to travel long distances across mountain roads for specialized screening and care.
 
 For many families, this can mean:
