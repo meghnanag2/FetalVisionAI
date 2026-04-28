@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/banner.svg" alt="FetalVisionAI Banner" width="100%" height="350"/>
+  <img src="images/banner.png" alt="FetalVisionAI Banner" width="100%" height="350"/>
 </p>
 
 
