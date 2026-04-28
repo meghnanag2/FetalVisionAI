@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/banner.svg" alt="FetalVisionAI Banner" width="1200%" height="250"/>
+  <img src="images/banner.svg" alt="FetalVisionAI Banner" width="100%" height="350"/>
 </p>
 
 
@@ -18,13 +18,13 @@ The goal is to create a more reliable prenatal screening workflow that identifie
 
 
 
-## Why This Project Matters
+## Why This Project Matters?
 
 <p align="center">
   <img src="images/motivaiton_image.png" alt="Colorado Maternity Care Deserts" width="50%"/>
 </p>
 
-### The Human Question Behind This Work
+#### The Human Question Behind This Work
 
 What if you were pregnant and lived in a maternity care desert? Would you need to spend hours traveling for specialist screening, incurring financial cost and uncertainty before knowing whether you were truly high risk?
 
