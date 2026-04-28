@@ -1,73 +1,69 @@
-<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="1200" height="340" viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>FetalVisionAI</title>
-  <desc>Banner for FetalVisionAI — Multimodal Deep Learning for Prenatal CHD Screening</desc>
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f2a42"/>
-      <stop offset="100%" stop-color="#1a3a58"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f8fa"/>
     </linearGradient>
-    <linearGradient id="lineFade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#3a7aaa" stop-opacity="0"/>
-      <stop offset="15%"  stop-color="#5a9fc8"/>
-      <stop offset="85%"  stop-color="#5a9fc8"/>
-      <stop offset="100%" stop-color="#3a7aaa" stop-opacity="0"/>
+    <linearGradient id="ekg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b02020"/>
+      <stop offset="60%" stop-color="#6a1a3a"/>
+      <stop offset="100%" stop-color="#1a2a5a"/>
     </linearGradient>
-    <linearGradient id="spikeFade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#5aaad4" stop-opacity="0"/>
-      <stop offset="35%"  stop-color="#88c8e8"/>
-      <stop offset="50%"  stop-color="#d0eef8"/>
-      <stop offset="65%"  stop-color="#88c8e8"/>
-      <stop offset="100%" stop-color="#5aaad4" stop-opacity="0"/>
-    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#8ab0cc" flood-opacity="0.35"/>
+    </filter>
   </defs>
 
-  <rect width="900" height="200" fill="url(#bg)"/>
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#bg)"/>
 
-  <line x1="0" y1="0" x2="900" y2="0" stroke="#3a6a90" stroke-width="2"/>
-
+  <!-- Title -->
   <text
-    x="450" y="56"
+    x="600" y="88"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="46"
+    font-size="72"
     font-weight="700"
-    fill="#e8f4ff"
+    fill="#0d1f35"
     text-anchor="middle"
-    letter-spacing="2"
+    letter-spacing="1"
   >FetalVisionAI</text>
 
+  <!-- Subtitle -->
   <text
-    x="450" y="78"
+    x="600" y="122"
     font-family="'Segoe UI', Arial, sans-serif"
-    font-size="11.5"
-    fill="#8ab8d4"
+    font-size="16"
+    font-weight="500"
+    fill="#3a5a78"
     text-anchor="middle"
-    letter-spacing="4"
-  >MULTIMODAL DEEP LEARNING  ·  PRENATAL CHD SCREENING</text>
+    letter-spacing="5"
+  >MULTIMODAL DEEP LEARNING FOR PRENATAL CHD SCREENING</text>
 
-  <line x1="120" y1="92" x2="780" y2="92" stroke="#2a5a7a" stroke-width="0.6"/>
-
-  <line x1="80" y1="118" x2="820" y2="118" stroke="url(#lineFade)" stroke-width="1.4"/>
-
+  <!-- EKG line with single dramatic spike centered -->
+  <!-- flat left → small bump → big QRS spike → small bump → flat right -->
   <polyline
-    points="80,118  370,118  382,118  390,110  397,124  404,90  411,145  417,118  427,118  435,110  441,118  530,118  820,118"
+    points="80,200  430,200  455,200  468,188  478,210  488,148  498,248  506,200  522,200  534,190  542,200  700,200  1120,200"
     fill="none"
-    stroke="url(#spikeFade)"
-    stroke-width="2.4"
+    stroke="url(#ekg)"
+    stroke-width="3.5"
     stroke-linecap="round"
     stroke-linejoin="round"
+    filter="url(#shadow)"
   />
 
-  <rect x="258" y="153" width="118" height="26" rx="13" fill="#0d2438" stroke="#3a6e94" stroke-width="0.9"/>
-  <text x="317" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="11.5" fill="#90c8e4" text-anchor="middle" font-weight="500">Multimodal AI</text>
+  <!-- Tag pills -->
+  <rect x="284" y="268" width="180" height="40" rx="20" fill="#0d1f35"/>
+  <text x="374" y="293" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="500">Multimodal AI</text>
 
-  <rect x="391" y="153" width="118" height="26" rx="13" fill="#0d2438" stroke="#3a6e94" stroke-width="0.9"/>
-  <text x="450" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="11.5" fill="#90c8e4" text-anchor="middle" font-weight="500">CHD Detection</text>
+  <rect x="510" y="268" width="180" height="40" rx="20" fill="#0d1f35"/>
+  <text x="600" y="293" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="500">CHD Detection</text>
 
-  <rect x="524" y="153" width="118" height="26" rx="13" fill="#0d2438" stroke="#3a6e94" stroke-width="0.9"/>
-  <text x="583" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="11.5" fill="#90c8e4" text-anchor="middle" font-weight="500">Health Equity</text>
+  <rect x="736" y="268" width="180" height="40" rx="20" fill="#0d1f35"/>
+  <text x="826" y="293" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="500">Health Equity</text>
 
-  <text x="450" y="194" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" fill="#4a7a9a" text-anchor="middle">© 2025 Vanessa Thorsten &amp; Meghna Nag · University of Colorado Boulder</text>
+  <!-- Copyright -->
+  <text x="600" y="332" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#6a8aaa" text-anchor="middle">© 2025 Vanessa Thorsten &amp; Meghna Nag · University of Colorado Boulder</text>
 
-  <line x1="0" y1="199" x2="900" y2="199" stroke="#3a6a90" stroke-width="1.5"/>
 </svg>
