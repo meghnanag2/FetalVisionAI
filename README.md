@@ -99,7 +99,7 @@ Combines both modalities together, allowing the model to learn interactions betw
 ## Dataset Details
 
 | Attribute | Value |
-|||
+|---|---|
 | Total Images | 6,558 |
 | Total Patients | 1,103 |
 | Prediction Target | Patient-level CHD risk |
@@ -112,10 +112,11 @@ Data were split at the patient level to prevent leakage, ensuring images from th
 ## Training Strategy
 
 | Loss Function | Purpose |
-|||
+|---|---|
 | BCE | Standard baseline classification |
 | Weighted BCE | Penalizes missed CHD cases more heavily |
 | Focal Loss | Focuses learning on hard minority examples |
+
 
 
 A model can appear statistically strong while still failing clinically if it misses too many positive cases. This project evaluates models through a **healthcare screening lens**, not just generic benchmark accuracy.
@@ -123,10 +124,11 @@ A model can appear statistically strong while still failing clinically if it mis
 ## Final Results
 
 | Model | Sensitivity | Specificity | AUROC | AUPRC |
-||:|:|:|:|
+|---|---:|---:|---:|---:|
 | BCE Baseline | 0.797 | 0.491 | 0.773 | 0.480 |
 | Weighted BCE | 0.757 | 0.737 | 0.799 | 0.327 |
-| Focal Loss | 0.770 | 0.688 | 0.814 | 0.522 |
+| **Focal Loss** | **0.770** | **0.688** | **0.814** | **0.522** |
+
 
 
 A model can appear statistically strong while still failing clinically if it misses too many positive cases. This project evaluates models through a **healthcare screening lens**, not just generic benchmark accuracy.
